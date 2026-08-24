@@ -1,0 +1,82 @@
+/* Estilos complementares do portfólio */
+
+.site-logo {
+  border-radius: 0;
+}
+
+.service-orbit {
+  transition: transform .3s ease;
+}
+
+.service-orbit:hover {
+  transform: translateY(-6px) rotate(3deg);
+}
+
+.service-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-details summary:focus-visible {
+  outline: 3px solid var(--color-primary-contrast);
+  outline-offset: 4px;
+}
+
+.service-arrow {
+  transition: transform .25s ease, background .25s ease, color .25s ease;
+}
+
+.service-details details[open] .service-arrow {
+  transform: rotate(90deg);
+  background: var(--color-primary-contrast);
+  color: var(--color-primary);
+}
+
+.project-card button {
+  display: block;
+}
+
+.project-card button:focus-visible,
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible,
+.input:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+
+.project-visual {
+  overflow: hidden;
+}
+
+.project-visual>div {
+  transition: transform .35s ease;
+}
+
+.project-card:hover .project-visual>div {
+  transform: scale(1.04);
+}
+
+#skills .grid {
+  justify-items: center;
+}
+
+#skills article {
+  width: 100%;
+  max-width: 220px;
+  text-align: center;
+}
+
+#skills article > div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#formStatus:empty {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .hero-stats {
+    gap: 16px;
+  }
+}
