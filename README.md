@@ -52,6 +52,7 @@ O desenvolvimento foi realizado seguindo as restrições técnicas da primeira e
 
 ---
 
+
 **Nota:** Este projeto foi desenvolvido seguindo a metodologia **Vibe Coding**, utilizando Inteligência Artificial como parceira na arquitetura e refinamento do código, mas mantendo a responsabilidade técnica e decisões de design centradas na engenharia de software.
 
 ## Visão geral
@@ -115,6 +116,13 @@ As principais decisões visuais estão centralizadas no arquivo `theme.css`, por
 - Raio das bordas e componentes.
 
 Para alterar o tema visual de todo o site, edite os valores definidos em `:root` nesse arquivo.
+
+
+### Screenshot do Projeto
+
+*   ![Screenshot](screenshot.png/)
+
+---
 
 ## Créditos
 
