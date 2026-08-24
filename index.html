@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -16,20 +16,457 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <span>Katia Reis</span>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
+  <!-- 1. HEADER & NAVBAR -->
+  <header class="site-shell py-5" id="inicio">
+    <nav class="flex items-center justify-between border-b border-[#e8e5e1] pb-5" aria-label="Navegação principal">
+      <a href="https://katiareis.com.br/" class="flex items-center" aria-label="Kátia Reis, início">
+        <img src="./assets/images/Logo- K Reis Studio Web 80x80.png" alt="K Reis Studio Web"
+          class="h-10 w-auto object-contain">
+      </a>
+      <div
+        class="mobile-menu md:flex md:items-center md:gap-8 absolute md:static top-20 left-5 right-5 z-20 bg-[var(--color-bg)] p-5 md:p-0 shadow-lg md:shadow-none flex-col md:flex-row gap-5"
+        id="navLinks">
+        <a href="#inicio" class="eyebrow hover:text-[var(--color-primary)]">Home</a>
+        <a href="#portfolio" class="eyebrow hover:text-[var(--color-primary)]">Portfólio</a>
+        <a href="#experiencia" class="eyebrow hover:text-[var(--color-primary)]">Experiência</a>
+        <a href="#contato" class="eyebrow hover:text-[var(--color-primary)]">Contato</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#contato" class="btn btn-dark hidden sm:inline-flex">Fale comigo <span>↗</span></a>
+        <button class="md:hidden text-xl" id="menuButton" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
     </nav>
   </header>
-  <main></main>
-  <footer></footer>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section class="site-shell grid md:grid-cols-[1fr_380px] gap-12 items-center py-16 md:py-24"
+      aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow mb-4">Front-end developer · visual designer</p>
+        <h1 id="hero-title" class="text-5xl md:text-7xl leading-[.93] max-w-xl">Kátia Reis<br><strong>Web
+            Developer</strong> & Designer<br>Based in São Paulo<span class="text-[var(--color-primary)]">*</span></h1>
+        <p class="text-sm text-[var(--color-muted)] mt-5">WordPress | Elementor | HTML, CSS & JavaScript</p>
+        <div class="flex flex-wrap gap-3 mt-7">
+          <a href="#contato" class="btn btn-primary">Hire me! <span>↗</span></a>
+          <a href="#portfolio" class="btn btn-dark">Portfólio <span>→</span></a>
+          <a href="./assets/downloads/katia-reis-cv.pdf" download="katia-reis-cv.pdf" class="btn btn-outline"
+            id="downloadTop">Baixar CV <span>↓</span></a>
+        </div>
+        <div class="grid grid-cols-3 gap-8 mt-16 max-w-lg">
+          <div><strong class="font-[var(--font-heading)] text-4xl">+3</strong>
+            <p class="eyebrow mt-2">anos de<br>experiência</p>
+          </div>
+          <div><strong class="font-[var(--font-heading)] text-4xl">{…}</strong>
+            <p class="eyebrow mt-2">clientes<br>worldwide</p>
+          </div>
+          <div><strong class="font-[var(--font-heading)] text-4xl">&gt;&gt;</strong>
+            <p class="eyebrow mt-2">projetos<br>realizados</p>
+          </div>
+        </div>
+      </div>
+      <div class="relative flex justify-center">
+        <span class="absolute -top-12 left-10 text-[var(--color-primary)] text-7xl leading-none">✱</span>
+        <div class="portrait w-64 h-64 md:w-80 md:h-80">
+          <img src="./assets/images/profile-katia-reis.png" alt="Foto profissional de Kátia Reis"
+            class="w-full h-full object-cover" loading="eager" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION -->
+    <section class="bg-[var(--color-primary)] text-white py-16 md:py-20" id="servicos" aria-labelledby="services-title">
+      <div class="site-shell grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="eyebrow text-white/70 mb-5">* service</p>
+          <h2 id="services-title" class="text-4xl md:text-5xl leading-tight">Criação de sites e landing pages em
+            WordPress + Elementor</h2>
+          <p class="text-sm leading-6 mt-5 max-w-md text-white/85">Transformo briefing em experiências digitais claras,
+            bonitas e funcionais — com foco em conversão, acessibilidade e performance.</p>
+          <div class="flex flex-wrap gap-5 mt-8">
+            <div class="w-28 h-28 rounded-full overflow-hidden rotate-6">
+              <img src="./assets/images/design-image-01.png" alt="Materiais de um estúdio de design gráfico"
+                class="w-full h-full object-cover">
+            </div>
+            <div class="w-28 h-28 rounded-full overflow-hidden -rotate-6">
+              <img src="./assets/images/design-image-02.png" alt="Pessoas trabalhando juntas usando um tablet"
+                class="w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+        <div class="divide-y divide-white/50 service-details">
+          <details>
+            <summary class="py-4 flex justify-between items-center cursor-pointer list-none">
+              <span>01 &nbsp; Briefing</span>
+              <span class="service-arrow border border-white rounded-full w-8 h-8 flex items-center justify-center"
+                aria-hidden="true">↗</span>
+            </summary>
+            <p class="pb-5 pr-12 text-sm leading-6 text-white/80">Criação de briefings detalhados para cada projeto,
+              garantindo clareza e alinhamento com os objetivos do cliente.</p>
+          </details>
+          <details>
+            <summary class="py-4 flex justify-between items-center cursor-pointer list-none">
+              <span>02 &nbsp; UI/UX Design</span>
+              <span class="service-arrow border border-white rounded-full w-8 h-8 flex items-center justify-center"
+                aria-hidden="true">↗</span>
+            </summary>
+            <p class="pb-5 pr-12 text-sm leading-6 text-white/80">Design de interfaces intuitivas e experiências de
+              usuário otimizadas.</p>
+          </details>
+          <details>
+            <summary class="py-4 flex justify-between items-center cursor-pointer list-none">
+              <span>03 &nbsp; Plugin Integration</span>
+              <span class="service-arrow border border-white rounded-full w-8 h-8 flex items-center justify-center"
+                aria-hidden="true">↗</span>
+            </summary>
+            <p class="pb-5 pr-12 text-sm leading-6 text-white/80">Integração eficiente de plugins para expandir as
+              funcionalidades do projeto.</p>
+          </details>
+          <details>
+            <summary class="py-4 flex justify-between items-center cursor-pointer list-none">
+              <span>04 &nbsp; Design &amp; Development</span>
+              <span class="service-arrow border border-white rounded-full w-8 h-8 flex items-center justify-center"
+                aria-hidden="true">↗</span>
+            </summary>
+            <p class="pb-5 pr-12 text-sm leading-6 text-white/80">Desenvolvimento completo do design, desde a concepção
+              até a implementação final.</p>
+          </details>
+          <details>
+            <summary class="py-4 flex justify-between items-center cursor-pointer list-none">
+              <span>05 &nbsp; Maintenance</span>
+              <span class="service-arrow border border-white rounded-full w-8 h-8 flex items-center justify-center"
+                aria-hidden="true">↗</span>
+            </summary>
+            <p class="pb-5 pr-12 text-sm leading-6 text-white/80">Manutenção contínua e suporte técnico para garantir o
+              funcionamento ideal do projeto.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROCESS SECTION -->
+    <section class="site-shell py-20" id="processo" aria-labelledby="process-title">
+      <div class="grid md:grid-cols-[260px_1fr] gap-12 items-start">
+        <div>
+          <div class="portrait w-56 h-56 mb-7">
+            <img src="./assets/images/briefing-meeting-image.png" alt="Pessoas trabalhando juntas usando um tablet"
+              class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="space-y-5">
+            <div>
+              <div class="flex justify-between text-xs mb-2"><span>Figma</span><span>82%</span></div>
+              <div class="progress-track">
+                <div class="progress-fill w-[82%]"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2"><span>Elementor</span><span>93%</span></div>
+              <div class="progress-track">
+                <div class="progress-fill w-[93%]"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2"><span>WordPress</span><span>89%</span></div>
+              <div class="progress-track">
+                <div class="progress-fill w-[89%]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="grid sm:grid-cols-2 gap-8 border-b border-[#e8e5e1] pb-8">
+            <div>
+              <h3 class="font-bold text-sm">WordPress + Elementor</h3>
+              <p class="text-xs text-[var(--color-muted)] mt-2 leading-5">Criação de sites em WordPress com foco em
+                usabilidade e performance.</p>
+            </div>
+            <div>
+              <h3 class="font-bold text-sm">Best Features</h3>
+              <p class="text-xs text-[var(--color-muted)] mt-2 leading-5">Landing pages, WooCommerce, temas e plugins.
+              </p>
+            </div>
+            <div>
+              <h3 class="font-bold text-sm">4 Year Experience</h3>
+              <p class="text-xs text-[var(--color-muted)] mt-2 leading-5">Desenvolvedora low-code, especializada na
+                criação de websites.</p>
+            </div>
+            <div>
+              <h3 class="font-bold text-sm">Best Design</h3>
+              <p class="text-xs text-[var(--color-muted)] mt-2 leading-5">Customização e personalização visual conforme
+                identidade.</p>
+            </div>
+          </div>
+          <h2 id="process-title" class="text-3xl mt-8">Design & Web Development</h2>
+          <p class="text-sm text-[var(--color-muted)] leading-6 max-w-xl mt-4">Planejo, desenho e desenvolvo interfaces
+            responsivas que conectam objetivos de negócio a necessidades reais de pessoas.</p><a
+            href="https://wa.me/5511930752218" class="btn btn-dark mt-6" target="_blank" rel="noopener noreferrer">Hire
+            Me! ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. EDUCATION & EXPERIENCE -->
+    <section class="site-shell py-12" id="experiencia" aria-labelledby="experience-title">
+      <h2 id="experience-title" class="text-3xl text-center mb-14">Education & Experience</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <p class="eyebrow">Educação</p>
+          <h3 class="font-bold text-sm mt-5">Análise e Desenvolvimento de Sistemas</h3>
+          <p class="eyebrow mt-2">IFSP GRU</p>
+          <h3 class="font-bold text-sm mt-8">UI/UX Design Certificate</h3>
+          <p class="eyebrow mt-2">ORIGAMID</p>
+        </div>
+        <div>
+          <p class="eyebrow">2017 — 2023</p>
+          <h3 class="font-bold text-sm mt-5">Web Design & Development</h3>
+          <p class="eyebrow mt-2">Freelancer</p>
+          <h3 class="font-bold text-sm mt-8">Front-end Developer</h3>
+          <p class="eyebrow mt-2">Agência Life</p>
+          <h3 class="font-bold text-sm mt-8">Web Designer</h3>
+          <p class="eyebrow mt-2">Freelancer</p>
+        </div>
+        <div>
+          <p class="eyebrow">2023 — present</p>
+          <h3 class="font-bold text-sm mt-5">Desenvolvedora Front-end</h3>
+          <p class="eyebrow mt-2">Elevare Tecnologia</p>
+          <h3 class="font-bold text-sm mt-8">Web Designer & Desenvolvimento Wordpress</h3>
+          <p class="eyebrow mt-2">Freelancer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. PORTFOLIO GRID -->
+    <section class="site-shell py-20" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="flex flex-col md:flex-row justify-between md:items-end gap-5 mb-8">
+        <div>
+          <p class="eyebrow mb-3">selected work</p>
+          <h2 id="portfolio-title" class="text-4xl">Projetos recentes</h2>
+        </div>
+        <div class="flex gap-2 flex-wrap" role="group" aria-label="Filtrar projetos"><button
+            class="btn btn-outline filter-active" data-filter="all">Todos</button><button class="btn btn-outline"
+            data-filter="web">Web</button><button class="btn btn-outline" data-filter="brand">Branding</button></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5" id="projectGrid">
+        <article class="project-card bg-[var(--color-surface)]" data-category="web">
+          <div class="project-visual h-60 overflow-hidden">
+            <img
+              src="https://github.com/devkatiareis/FrontendMentor-huddle-landing-page-code-challenge/blob/main/screenshot.jpg?raw=true"
+              alt="Prévia do projeto Huddle Landing Page" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl">Huddle Landing Page</h3>
+            <p class="text-xs text-[var(--color-muted)] mt-2">Este pequeno projeto cria uma landing page com uma única
+              seção introdutória, utilizando HTML semântico e CSS.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="eyebrow">HTML</span>
+              <span class="eyebrow">CSS</span>
+            </div>
+            <a href="https://devkatiareis.github.io/FrontendMentor-huddle-landing-page-code-challenge/"
+              class="btn btn-dark mt-5" target="_blank" rel="noopener noreferrer">Ver projeto live <span>↗</span></a>
+          </div>
+        </article>
+        <article class="project-card bg-[var(--color-surface)]" data-category="web">
+          <div class="project-visual h-60 overflow-hidden">
+            <img
+              src="https://github.com/devkatiareis/FrontendMentor-blog-preview-card-code-challenge/blob/main/screenshot.png?raw=true"
+              alt="Prévia do projeto Blog preview card" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl">Blog preview card</h3>
+            <p class="text-xs text-[var(--color-muted)] mt-2">Este pequeno projeto cria um card de post de blog
+              utilizando HTML semântico e CSS.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="eyebrow">HTML</span>
+              <span class="eyebrow">CSS</span>
+            </div>
+            <a href="https://devkatiareis.github.io/FrontendMentor-blog-preview-card-code-challenge/"
+              class="btn btn-dark mt-5" target="_blank" rel="noopener noreferrer">Ver projeto live <span>↗</span></a>
+          </div>
+        </article>
+        <article class="project-card bg-[var(--color-surface)]" data-category="web">
+          <div class="project-visual h-60 overflow-hidden">
+            <img
+              src="https://github.com/devkatiareis/FrontendMentor-recipe-page-code-challenge/blob/main/screenshot.png?raw=true"
+              alt="Prévia do projeto Recipe Page" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl">Recipe Page</h3>
+            <p class="text-xs text-[var(--color-muted)] mt-2">Este pequeno projeto desenvolve uma página de postagem de
+              receita em um blog, utilizando HTML semântico e CSS.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="eyebrow">HTML</span>
+              <span class="eyebrow">CSS</span>
+            </div>
+            <a href="https://devkatiareis.github.io/FrontendMentor-recipe-page-code-challenge/"
+              class="btn btn-dark mt-5" target="_blank" rel="noopener noreferrer">Ver projeto live <span>↗</span></a>
+          </div>
+        </article>
+        <article class="project-card bg-[var(--color-surface)]" data-category="brand">
+          <div class="project-visual h-60 overflow-hidden">
+            <img src="./assets/images/cecapskateboard.png" alt="Identidade visual Cecap Skateboard"
+              class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="p-5">
+            <h3 class="text-xl">Criação de marca Cecap Skateboard</h3>
+            <p class="text-xs text-[var(--color-muted)] mt-2">Projeto de criação de branding e website em Wordpress para
+
+              a marca Cecap Skateboard.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="eyebrow">Branding</span>
+              <span class="eyebrow">WordPress</span>
+            </div>
+            <a href="https://cecapskateboard.com.br/" class="btn btn-dark mt-5" target="_blank"
+              rel="noopener noreferrer">Ver projeto live <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 7. FEATURES & SKILLS SECTION -->
+    <section class="site-shell py-20 md:py-24" id="skills" aria-labelledby="skills-title">
+      <div class="text-center">
+        <h2 id="skills-title" class="text-4xl md:text-5xl">Skills e Ferramentas</h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16 mt-20 text-center">
+        <article class="flex flex-col items-center">
+          <div class="h-16 flex items-center justify-center mb-5">
+            <img src="assets\images\wordpress-simple-brands-solid.svg" alt="Logo do WordPress"
+              class="max-h-16 max-w-20 object-contain">
+          </div>
+          <h3 class="text-2xl">WordPress</h3>
+          <p class="text-sm leading-6 text-[var(--color-muted)] max-w-xs mt-5">Criação e Personalização avançada e
+            otimização para motores de busca (SEO)</p>
+        </article>
+        <article class="flex flex-col items-center">
+          <div class="h-16 flex items-center justify-center mb-5">
+            <img src="./assets/images/elementor-brands-solid.svg" alt="Logo do Elementor"
+              class="max-h-16 max-w-20 object-contain">
+          </div>
+          <h3 class="text-2xl">Elementor</h3>
+          <p class="text-sm leading-6 text-[var(--color-muted)] max-w-xs mt-5">Criação de Temas e modelos</p>
+        </article>
+        <article class="flex flex-col items-center">
+          <div class="h-16 flex items-center justify-center mb-5">
+            <img src="./assets/images/figma-icon.svg" alt="Logo do Figma" class="max-h-16 max-w-20 object-contain">
+          </div>
+          <h3 class="text-2xl">Figma</h3>
+          <p class="text-sm leading-6 text-[var(--color-muted)] max-w-xs mt-5">Prototipagem e design</p>
+        </article>
+        <article class="flex flex-col items-center">
+          <div class="h-16 flex items-center justify-center mb-5">
+            <img src="./assets/images/html5-original-wordmark.svg" alt="Logo do HTML5"
+              class="max-h-16 max-w-20 object-contain">
+          </div>
+          <h3 class="text-2xl">Semantic HTML</h3>
+          <p class="text-sm leading-6 text-[var(--color-muted)] max-w-xs mt-5">Semantic HTML</p>
+        </article>
+        <article class="flex flex-col items-center">
+          <div class="h-16 flex items-center justify-center mb-5">
+            <img src="./assets/images/css3-original-wordmark.svg" alt="Logo do CSS3"
+              class="max-h-16 max-w-20 object-contain">
+          </div>
+          <h3 class="text-2xl">Custom CSS</h3>
+          <p class="text-sm leading-6 text-[var(--color-muted)] max-w-xs mt-5">Design Moderno e Customizado</p>
+        </article>
+        <article class="flex flex-col items-center">
+          <div class="h-16 flex items-center justify-center mb-5">
+            <img src="./assets/images/javascript-original.svg" alt="Logo do JavaScript"
+              class="max-h-16 max-w-20 object-contain">
+          </div>
+          <h3 class="text-2xl">Funcionalidades</h3>
+          <p class="text-sm leading-6 text-[var(--color-muted)] max-w-xs mt-5">Criação de Funcionalidades em Javascript
+          </p>
+        </article>
+        <article class="flex flex-col items-center">
+          <div class="h-16 flex items-center justify-center mb-5">
+            <img src="./assets/images/php-original.svg" alt="Logo do PHP" class="max-h-16 max-w-20 object-contain">
+          </div>
+          <h3 class="text-2xl">PHP</h3>
+          <p class="text-sm leading-6 text-[var(--color-muted)] max-w-xs mt-5">Criação de Funcionalidades &amp; Plugins
+            em PHP</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 8. TESTIMONIALS -->
+    <section class="site-shell py-20" id="depoimentos">
+      <h2 class="text-3xl text-center mb-12">Depoimento de Clientes</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <blockquote class="border-t border-[#e8e5e1] pt-6">
+          <p class="text-lg italic leading-7">“Especialista na criação de experiências digitais de alta performance.”
+          </p>
+          <footer class="eyebrow mt-5">Felipe · Diretor de Tecnologia</footer>
+        </blockquote>
+        <blockquote class="border-t border-[#e8e5e1] pt-6">
+          <p class="text-lg italic leading-7">“Profissional organizada, responsável e com autonomia para trabalhar
+            remotamente.”</p>
+          <footer class="eyebrow mt-5">Thalita Nogueira · Artista Visual</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- 9. CONTACT SECTION -->
+    <section class="bg-[var(--color-text)] text-white py-16" id="contato" aria-labelledby="contact-title">
+      <div class="site-shell grid md:grid-cols-2 gap-12">
+        <div>
+          <p class="eyebrow text-white/60 mb-5">let's work together</p>
+          <h2 id="contact-title" class="text-5xl">Tem um projeto<br>em mente<span
+              class="text-[var(--color-primary)]">?</span></h2>
+          <p class="text-white/70 mt-5 max-w-sm text-sm leading-6">Conte um pouco sobre seu desafio. Retorno em até 2
+            dias úteis.</p>
+          <a href="https://wa.me/5511930752218" class="btn btn-primary mt-8" id="whatsappButton" target="_blank"
+            rel="noopener noreferrer">Fale comigo no WhatsApp ↗</a>
+        </div>
+        <form id="contactForm" class="space-y-5">
+          <label class="block text-sm">Nome<input class="input text-white" name="name" required></label>
+          <label class="block text-sm">E-mail<input class="input text-white" type="email" name="email" required></label>
+          <label class="block text-sm">Mensagem<textarea class="input text-white resize-none" name="message" rows="3"
+              required>
+          </textarea></label>
+          <button class="btn btn-primary disabled:opacity-40" type="submit" id="submitButton" disabled>
+            Enviar mensagem ↗
+          </button>
+          <p id="formStatus" class="text-sm text-[var(--color-primary)]" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10. FOOTER -->
+  <footer class="site-shell py-12">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-[#e8e5e1] pb-10">
+      <div><strong class="font-[var(--font-heading)] text-4xl">4</strong>
+        <p class="eyebrow mt-2">anos de experiência</p>
+      </div>
+      <div><strong class="font-[var(--font-heading)] text-4xl">98%</strong>
+        <p class="eyebrow mt-2">clientes satisfeitos</p>
+      </div>
+      <div><strong class="font-[var(--font-heading)] text-4xl">9</strong>
+        <p class="eyebrow mt-2">clientes no mundo</p>
+      </div>
+      <div><strong class="font-[var(--font-heading)] text-4xl">83</strong>
+        <p class="eyebrow mt-2">projetos realizados</p>
+      </div>
+    </div>
+    <div class="flex flex-col sm:flex-row justify-between gap-4 pt-8">
+      <p class="text-xs text-[var(--color-muted)]">© 2026 Kátia Reis. Feito com intenção.</p>
+      <a href="https://github.com/devkatiareis/web-designer-landing-page" target="_blank" class="text-xs underline">Veja este projeto no GitHub</a>
+      <a
+        href="./assets/downloads/katia-reis-cv.pdf" download="katia-reis-cv.pdf" class="text-xs underline"
+        id="downloadBottom">Baixar currículo em PDF ↓
+      </a>
+    </div>
+  </footer>
+
+  <div class="lightbox fixed inset-0 z-50 hidden items-center justify-center p-6" id="lightbox" role="dialog"
+    aria-modal="true" aria-label="Visualização ampliada">
+    <div class="bg-[var(--color-bg)] text-[var(--color-text)] max-w-lg w-full p-10 text-center">
+      <div class="text-8xl text-[var(--color-primary)] mb-5">✦</div>
+      <h2 class="text-3xl" id="lightboxTitle"></h2>
+      <p class="text-sm text-[var(--color-muted)] mt-3">Case visual em destaque</p><button class="btn btn-dark mt-7"
+        id="closeLightbox">Fechar</button>
+    </div>
+  </div>
   <script src="./js/script.js"></script>
 </body>
 
