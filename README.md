@@ -93,7 +93,7 @@ Projeto de criação de branding e website em WordPress para a marca Cecap Skate
     ├── downloads/
     └── images/
 └── docs/
-    ├──documentacao.md
+    ├── documentacao.md
     └── projeto.md
 ```
 
