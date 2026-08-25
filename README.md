@@ -12,7 +12,7 @@ Portfólio profissional de Kátia Reis, desenvolvedora front-end e visual design
 ### Identificação do Aluno
 
 *   **Nome:** Kátia Reis
-*   **GU/Matrícula:** [GU3081842]
+*   **Aluno** IFSP
 *   **Disciplina:** Desenvolvimento Full Stack
 
 ### Tecnologias Utilizadas
